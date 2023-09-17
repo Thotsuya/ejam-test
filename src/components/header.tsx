@@ -86,10 +86,9 @@ export default function Header() {
             </header>
 
             <div className="app-header__content">
-                {/*Coming from the left*/}
                 <motion.div
-                    initial={{opacity: 0, x: -50}}
-                    animate={{opacity: 1, x: 0}}
+                    initial={{opacity: 0, y: 50}}
+                    animate={{opacity: 1, y: 0}}
                     transition={{duration: 0.5, delay: 0.1}}
                     className="app-header__content--logo">
                     <img src="/logo.png" alt="logo" className="app-header__content--logo-img" />
@@ -97,9 +96,9 @@ export default function Header() {
 
                 {/*Coming from the right*/}
                 <motion.div
-                    initial={{opacity: 0, x: 50}}
-                    animate={{opacity: 1, x: 0}}
-                    transition={{duration: 0.5, delay: 0.1}}
+                    initial={{opacity: 0, y: 50}}
+                    animate={{opacity: 1, y: 0}}
+                    transition={{duration: 0.5, delay: 0.2}}
                     className="app-header__content--logo">
                     <img src="/mcAfee.png" alt="logo" className="app-header__content--logo-img-alt" />
                     <img src="/norton-antivirus-logo.svg" alt="logo" className="app-header__content--logo-img-alt" />

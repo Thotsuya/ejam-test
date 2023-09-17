@@ -7,10 +7,16 @@ $padding-horizontal: 8rem;
 
 @import "header";
 
+html{
+    overflow-x: hidden;
+}
+
 body{
     margin: 0;
     font-family: 'Manrope', sans-serif;
     font-size: 14px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 
@@ -27,6 +33,7 @@ body{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100%;
 
         .main-content__title{
             font-size: 2rem;
@@ -42,13 +49,14 @@ body{
         }
 
         .main-content__subtitle{
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-style: normal;
             font-weight: 300;
-            margin: 0.4rem 0 0 0;
+            margin: 1rem 0;
             color: #4D5254;
             text-align: center;
             text-transform: capitalize;
+            width: 100%;
 
             @media (min-width: 768px) {
                 font-size: 1.5rem;

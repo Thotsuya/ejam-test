@@ -1,7 +1,7 @@
 .header {
   background-color: #252F3D;
   color: white;
-  padding: 0.5rem;
+  padding: 1rem;
 
   .app-header {
     display: none;
@@ -64,7 +64,6 @@
 
 .swiper-button-prev {
   background-image: url("/arrow.svg");
-  left: 1rem !important;
   transform: rotate(180deg);
 
   &::after {
@@ -78,7 +77,6 @@
 
 .swiper-button-next {
   background-image: url("/arrow.svg");
-  right: 1rem !important;
 
   &::after {
     content: "" !important;
