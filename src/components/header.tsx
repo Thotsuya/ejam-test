@@ -1,5 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
+import {motion} from "framer-motion";
 
 // Import Swiper styles
 import 'swiper/css';
@@ -41,8 +43,9 @@ export default function Header() {
                     <Swiper
                         spaceBetween={20}
                         slidesPerView={1}
-                        modules={[Navigation]}
+                        modules={[Navigation,Autoplay]}
                         navigation
+                        autoplay={{delay: 2000}}
                         onSlideChange={() => console.log('slide change')}
                         onSwiper={(swiper) => console.log(swiper)}
                     >
@@ -83,14 +86,24 @@ export default function Header() {
             </header>
 
             <div className="app-header__content">
-                <div className="app-header__content--logo">
+                {/*Coming from the left*/}
+                <motion.div
+                    initial={{opacity: 0, x: -50}}
+                    animate={{opacity: 1, x: 0}}
+                    transition={{duration: 0.5, delay: 0.1}}
+                    className="app-header__content--logo">
                     <img src="/logo.png" alt="logo" className="app-header__content--logo-img" />
-                </div>
+                </motion.div>
 
-                <div className="app-header__content--logo">
+                {/*Coming from the right*/}
+                <motion.div
+                    initial={{opacity: 0, x: 50}}
+                    animate={{opacity: 1, x: 0}}
+                    transition={{duration: 0.5, delay: 0.1}}
+                    className="app-header__content--logo">
                     <img src="/mcAfee.png" alt="logo" className="app-header__content--logo-img-alt" />
                     <img src="/norton-antivirus-logo.svg" alt="logo" className="app-header__content--logo-img-alt" />
-                </div>
+                </motion.div>
             </div>
         </>
     )

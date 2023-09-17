@@ -1,5 +1,6 @@
 import Header from "./components/header.tsx";
 import Steps from "./components/steps.tsx";
+import {motion} from "framer-motion";
 
 function App() {
     return (
@@ -8,11 +9,20 @@ function App() {
             <section className="main-content">
                 <Steps/>
 
-                <h3 className="hero-text">
+                <motion.h3
+                    initial={{opacity: 0, y: 50}}
+                    animate={{opacity: 1, y: 0}}
+                    transition={{duration: 0.5, delay: 0.8}}
+                    className="hero-text">
                     <span className="highlight">ONE TIME ONLY</span> special price for 6 extra Clarifion for only <span
                     className="highlight">$14 each</span> ($84.00 total!)
-                </h3>
-                <div className="main-content__hero-container">
+                </motion.h3>
+                {/*Fade animation*/}
+                <motion.div
+                    initial={{opacity: 0, y: 50}}
+                    animate={{opacity: 1, y: 0}}
+                    transition={{duration: 0.5, delay: 0.5}}
+                    className="main-content__hero-container">
                     <div className="hero-left-section">
                         <img src="/image 4.png" alt="logo" className="hero-left-section__img"/>
                         <div className="hero-left-section__testimonial-container">
@@ -165,7 +175,7 @@ function App() {
 
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </section>
 
             <footer className="footer">
