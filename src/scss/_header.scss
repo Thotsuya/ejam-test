@@ -1,0 +1,134 @@
+.header {
+  background-color: #252F3D;
+  color: white;
+  padding: 0.5rem;
+
+  .app-header {
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+
+    .app-header__text {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+
+      .app-header__text--title {
+        text-transform: uppercase;
+      }
+    }
+
+    @media(min-width: 768px) {
+      display: flex;
+    }
+  }
+
+  .mobile-app-header {
+    display: flex;
+
+    @media(min-width: 768px) {
+      display: none;
+    }
+  }
+
+  @media(min-width: 768px) {
+    padding: 1rem;
+  }
+}
+
+.mobile-app-header__slide {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+
+  .mobile-app-header__slide--title {
+    text-transform: uppercase;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: transparent;
+  color: #fff;
+  background-position: center;
+  background-size: 24px;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 40px;
+}
+
+.swiper-button-prev {
+  background-image: url("/arrow.svg");
+  left: 1rem !important;
+  transform: rotate(180deg);
+
+  &::after {
+    content: "" !important;
+  }
+
+  @media (min-width: 768px) {
+    left: 8rem !important;
+  }
+}
+
+.swiper-button-next {
+  background-image: url("/arrow.svg");
+  right: 1rem !important;
+
+  &::after {
+    content: "" !important;
+  }
+
+  @media (min-width: 768px) {
+    right: 8rem !important;
+  }
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.app-header__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 1rem;
+
+  @media(min-width: 768px) {
+    padding: 2rem $padding-horizontal;
+  }
+
+  .app-header__content--logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.9rem;
+
+    .app-header__content--logo-img {
+      width: 100px;
+
+        @media(min-width: 768px) {
+            width: 192px;
+        }
+    }
+
+    .app-header__content--logo-img-alt{
+      width: 44px;
+
+        @media(min-width: 768px) {
+            width: 100%;
+        }
+    }
+  }
+}
