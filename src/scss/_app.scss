@@ -34,6 +34,7 @@ body{
             font-weight: 400;
             margin:0;
             text-align: center;
+            text-transform: capitalize;
 
             @media (min-width: 768px) {
                 font-size: 3rem;
@@ -47,6 +48,7 @@ body{
             margin: 0.4rem 0 0 0;
             color: #4D5254;
             text-align: center;
+            text-transform: capitalize;
 
             @media (min-width: 768px) {
                 font-size: 1.5rem;
